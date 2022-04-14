@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace ContactList.Models
 {
-    public class ContactType
+    public enum ContactType
     {
+        Person=0,
+        Company
     }
 }
