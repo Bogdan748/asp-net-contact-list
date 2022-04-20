@@ -13,6 +13,8 @@ namespace ContactList.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        private int i=0;
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -20,6 +22,14 @@ namespace ContactList.Controllers
 
         public IActionResult Index()
         {
+            ViewData["i"] = i;
+            return View();
+        }
+
+        public IActionResult Increment()
+        {
+            i++;
+            ViewData["i"] = i;
             return View();
         }
 
